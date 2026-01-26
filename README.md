@@ -107,3 +107,178 @@ At each user turn:
 1. **Schema tracing**
    ```python
    match_score, matched_schema, exact_match = schema_tracing(user_input)
+
+
+---
+
+## Installation
+
+### Requirements
+
+- Python 3.9+
+- Recommended: GPU with CUDA (for faster inference / fine-tuning)
+- Python packages:
+  - `torch`
+  - `transformers`
+  - `sentence-transformers`
+  - `peft`
+  - `accelerate` (recommended)
+  - `scikit-learn` (optional)
+  - plus standard library modules (`json`, `datetime`, etc.)
+
+### Setup
+
+```bash
+git clone https://github.com/supersyd24/Conscious-AI-Chatbot.git
+cd Conscious-AI-Chatbot
+
+# (Optional but recommended)
+python -m venv venv
+source venv/bin/activate   # macOS / Linux
+# venv\Scripts\activate    # Windows
+
+pip install -r requirements.txt
+
+
+---
+
+### 2. Project Structure
+
+```markdown
+---
+
+## Project Structure
+
+A minimal expected layout:
+
+```text
+Conscious-AI-Chatbot/
+├─ conscious_dv_chatbot.py     # main chatbot script
+├─ emotion_model/              # local emotion classifier
+│  ├─ config.json
+│  ├─ pytorch_model.bin
+│  ├─ tokenizer.json / vocab files
+│  └─ label_map.json
+├─ schemas/                    # auto-created; stores learned schemas
+├─ README.md                   # this file
+└─ requirements.txt            # Python dependencies (optional but recommended)
+
+
+---
+
+### 3. How to Run
+
+```markdown
+---
+
+## How to Run
+
+1. Make sure your Python environment is set up and dependencies are installed.
+2. Place your emotion classifier in the `emotion_model/` folder (see below).
+3. Run:
+
+```bash
+python conscious_dv_chatbot.py
+
+
+---
+
+### 4. Configuration (Emotion Model, LM Studio, etc.)
+
+```markdown
+---
+
+## Configuration
+
+### Emotion Model
+
+This project expects a local Hugging Face–style classifier in `emotion_model/`.
+
+- Must be loadable with:
+  - `AutoTokenizer.from_pretrained("emotion_model")`
+  - `AutoModelForSequenceClassification.from_pretrained("emotion_model")`
+- Must include a `label_map.json` mapping label names to ids, e.g.:
+
+```json
+{
+  "anger": 0,
+  "fear": 1,
+  "sadness": 2,
+  "joy": 3,
+  "neutral": 4
+}
+
+
+---
+
+### 5. Example Interaction
+
+Show people what it *feels* like to use:
+
+```markdown
+---
+
+## Example Interaction
+
+```text
+User: I feel scared to leave my relationship. I don't know if I'm overreacting.
+[Schema Created - NOVELTY] → Name: schema_2026-01-25_12-30, Emotion: fear, Entropy: 4.2137
+AI: It makes sense that you're scared. Leaving can feel dangerous and uncertain,
+    especially when you've been hurt or controlled. You’re not overreacting.
+    Do you want to talk about what’s been happening and what feels unsafe?
+
+
+---
+
+### 6. Roadmap / TODO
+
+This is nice both for you and for anyone visiting your GitHub:
+
+```markdown
+---
+
+## Roadmap / TODO
+
+Planned / in-progress directions:
+
+- [ ] Swap GPT-2 with a stronger local LLM (e.g., Llama 3 via LM Studio or `transformers`).
+- [ ] Add a simple web UI for safer, more guided interaction.
+- [ ] Improve emotion classifier and expand label set for richer emotional metadata.
+- [ ] Add logging + visualization of:
+  - when schemas are created vs. recalled
+  - entropy and uncertainty over time
+- [ ] Integrate directly with my **Mathematical Formalism** paper (Conscious Transformation & Schema Recall).
+- [ ] Add unit tests around schema_tracing, novelty detection, and fuzzy logic gating.
+
+---
+
+## License
+
+This project is currently shared for **research and educational purposes**.
+
+A formal open-source license (e.g., MIT or Apache-2.0) may be added in the future.  
+Until then, please do not use this code in production systems or commercial products without permission.
+
+---
+
+## Citing This Work
+
+If you reference this project in your own research, you can cite it informally as:
+
+> Cook, Sydney. *Conscious DV Chatbot – A Schema-Based, Consciousness-Inspired Chatbot for Domestic Violence Survivors* (ongoing research project).
+
+Once your consciousness theory papers are public, you can add formal BibTeX entries here.
+
+---
+
+## Contact
+
+If you’re interested in:
+
+- Conscious AI  
+- Schema-based models of consciousness  
+- Trauma-aware conversational agents  
+
+you can reach me via GitHub (issues / discussions) at:  
+**[@supersyd24](https://github.com/supersyd24)**
+
