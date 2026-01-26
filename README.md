@@ -1,4 +1,4 @@
-# Conscious DV Chatbot 🧠💬  
+# Conscious DV Chatbot 
 *A schema-based, trauma-aware conversational agent for domestic violence survivors*
 
 ---
