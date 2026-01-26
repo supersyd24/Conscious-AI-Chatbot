@@ -132,6 +132,7 @@ At each user turn:
 git clone https://github.com/supersyd24/Conscious-AI-Chatbot.git
 cd Conscious-AI-Chatbot
 
+```
 # (Optional but recommended)
 python -m venv venv
 source venv/bin/activate   # macOS / Linux
