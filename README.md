@@ -207,10 +207,7 @@ This project expects a local Hugging Face–style classifier in `emotion_model/`
 
 Show people what it *feels* like to use:
 
-```markdown
 ---
-
-## Example Interaction
 
 ```text
 User: I feel scared to leave my relationship. I don't know if I'm overreacting.
@@ -218,7 +215,7 @@ User: I feel scared to leave my relationship. I don't know if I'm overreacting.
 AI: It makes sense that you're scared. Leaving can feel dangerous and uncertain,
     especially when you've been hurt or controlled. You’re not overreacting.
     Do you want to talk about what’s been happening and what feels unsafe?
-
+```
 
 ---
 
@@ -226,10 +223,8 @@ AI: It makes sense that you're scared. Leaving can feel dangerous and uncertain,
 
 This is nice both for you and for anyone visiting your GitHub:
 
-```markdown
 ---
 
-## Roadmap / TODO
 
 Planned / in-progress directions:
 
