@@ -133,10 +133,10 @@ git clone https://github.com/supersyd24/Conscious-AI-Chatbot.git
 cd Conscious-AI-Chatbot
 
 ```
-# (Optional but recommended)
+(Optional but recommended)
 python -m venv venv
 source venv/bin/activate   # macOS / Linux
-# venv\Scripts\activate    # Windows
+venv\Scripts\activate    # Windows
 
 pip install -r requirements.txt
 
@@ -165,10 +165,8 @@ Conscious-AI-Chatbot/
 
 ### 3. How to Run
 
-```markdown
 ---
 
-## How to Run
 
 1. Make sure your Python environment is set up and dependencies are installed.
 2. Place your emotion classifier in the `emotion_model/` folder (see below).
@@ -176,16 +174,13 @@ Conscious-AI-Chatbot/
 
 ```bash
 python conscious_dv_chatbot.py
-
+```
 
 ---
 
 ### 4. Configuration (Emotion Model, LM Studio, etc.)
 
-```markdown
 ---
-
-## Configuration
 
 ### Emotion Model
 
@@ -204,7 +199,7 @@ This project expects a local Hugging Face–style classifier in `emotion_model/`
   "joy": 3,
   "neutral": 4
 }
-
+```
 
 ---
 
