@@ -145,10 +145,6 @@ pip install -r requirements.txt
 
 ### 2. Project Structure
 
-```markdown
----
-
-## Project Structure
 
 A minimal expected layout:
 
