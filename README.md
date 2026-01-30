@@ -254,8 +254,6 @@ If you reference this project in your own research, you can cite it informally a
 
 > Cook, Sydney. *Conscious DV Chatbot – A Schema-Based, Consciousness-Inspired Chatbot for Domestic Violence Survivors* (ongoing research project).
 
-Once your consciousness theory papers are public, you can add formal BibTeX entries here.
-
 ---
 
 ## Contact
