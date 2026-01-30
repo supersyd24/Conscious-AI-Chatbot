@@ -163,7 +163,7 @@ Conscious-AI-Chatbot/
 ├─ schemas/                    # auto-created; stores learned schemas
 ├─ README.md                   # this file
 └─ requirements.txt            # Python dependencies (optional but recommended)
-
+```
 
 ---
 
